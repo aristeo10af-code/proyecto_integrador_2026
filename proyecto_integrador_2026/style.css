@@ -1,0 +1,93 @@
+:root {
+    --primary-green: #2ecc71;
+    --dark-green: #27ae60;
+    --light-bg: #f5f6fa;
+    --text-color: #2f3640;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 { color: var(--dark-green); margin-bottom: 5px; }
+
+.forms-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-primary { background: var(--primary-green); color: white; }
+.btn-primary:hover { background: var(--dark-green); }
+
+.btn-secondary { background: #3498db; color: white; }
+
+.tips-container {
+    margin-top: 50px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 5px solid var(--primary-green);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.tip-item {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .forms-section { grid-template-columns: 1fr; }
+}

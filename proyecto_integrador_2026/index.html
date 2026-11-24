@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección GPS - Acceso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>EcoRuta GPS</h1>
+            <p>Sistema de Gestión de Desechos Municipales</p>
+        </header>
+
+        <section class="forms-section">
+            <div class="card">
+                <h2>Iniciar Sesión</h2>
+                <form action="auth.php" method="POST">
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit" name="login" class="btn-primary">Entrar al Sistema</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Registrarse</h2>
+                <form action="auth.php" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="password" name="password" placeholder="Crear Contraseña" required>
+                    <select name="rol">
+                        <option value="ciudadano">Soy Ciudadano</option>
+                        <option value="recolector">Soy Recolector (Chofer)</option>
+                    </select>
+                    <button type="submit" name="registro" class="btn-secondary">Crear Cuenta</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="tips-container">
+            <h3>🌱 Consejos de Higiene y Limpia Pública</h3>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <strong>Regla de los 500m:</strong> No saques la basura hasta que la app te notifique que el camión está cerca para evitar fauna nociva.
+                </div>
+                <div class="tip-item">
+                    <strong>Cierre Hermético:</strong> Asegura las bolsas con doble nudo para evitar derrames de lixiviados en la calle.
+                </div>
+                <div class="tip-item">
+                    <strong>Separación:</strong> Clasifica lo orgánico de lo inorgánico para reducir el volumen de desechos que llegan al relleno sanitario.
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
